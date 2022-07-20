@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   </head>
+<body>
+  <form class ="input-form" method="POST" action="/formPost">
+  <div class='wrapper'>
+    <h2>ENOTOC FORM DISTRIBUTION</h2>
+    <div class='input-box'>
+      <input name='frstName' id='frstName' type='text' placeholder='Enter your first name' required>
+    </div>
+    <div class='input-box'>
+      <input name='lstName' id='lstName' type='text' placeholder='Enter your last name' required>
+    </div>
+    <div class='input-box'>
+      <input name='rsEmail' id='rsEmail' type='text' placeholder='Enter ramp supervisor email' required>
+    </div>
+    <div class='input-box'>
+      <input name='picEmail' id='picEmail' type='text' placeholder='Enter pilot in command email' required>
+    </div>
+   <div class='input-box button'>
+    <input type='Submit' value='Create form' >
+  </div>
+  <iframe id='signnow-form' style='height: 1100px;width:100%;visibility:hidden;' frameborder='0' scrolling='no' src=''></iframe>
+  </div>
+</form>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .input-form {
+        display: block;
+    }
+    .wrapper{
+      position: relative;
+      width: 100%;
+      height: 535px;
+      background: #fff;
+      padding: 34px;
+      border-radius: 6px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    .wrapper h2{
+      position: relative;
+      font-size: 22px;
+      font-weight: 600;
+      color: #333;
+    }
+    .input-box input{
+      /* height: 100%; */
+      width: 90% !important;
+      outline: none;
+      padding: 15px 15px;
+      margin: 15px 15px;
+      font-size: 17px;
+      font-weight: 400;
+      color: #333;
+      border: 1.5px solid #C7BEBE;
+      border-bottom-width: 2.5px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    .input-box input:focus,
+    .input-box input:valid{
+      border-color: #4070f4;
+    }
+    .input-box.button input{
+      color: #fff;
+      letter-spacing: 1px;
+      border: none;
+      background: #4070f4;
+      cursor: pointer;
+    }
+    .input-box.button input:hover{
+      background: #0e4bf1;
+    }
+    </style>
+    </html>

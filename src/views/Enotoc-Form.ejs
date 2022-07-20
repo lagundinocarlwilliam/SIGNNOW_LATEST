@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+</head>
+
+<body>
+  <div class='wrapper'>
+    <h2>CARGO AGENT - ENOTOC FORM</h2>
+    <div class="sendToRS" style="padding-bottom: 10px;">
+      <button class="btn-sendNotif" onclick="sendToRS()">SEND NOTIF TO NEXT SIGNER</button>
+    </div>
+    <iframe id='signnow-form' style='height: 1100px;width:100%;' frameborder='0' scrolling='no' src=<%=urlLink
+      %>></iframe>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+  function sendToRS(){
+    window.location.href = "http://localhost:8000/sendToRS";
+  }
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-form {
+    display: block;
+  }
+
+.btn-sendNotif {
+  background: #0077c8;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+  .wrapper {
+    position: relative;
+    width: 100%;
+    /* display:flex; */
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .wrapper h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .input-box input {
+    /* height: 100%; */
+    /* width: 120%; */
+    outline: none;
+    padding: 15px 15px;
+    margin: 15px 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .input-box input:focus,
+  .input-box input:valid {
+    border-color: #4070f4;
+  }
+
+  .input-box.button input {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: #4070f4;
+    cursor: pointer;
+  }
+
+  .input-box.button input:hover {
+    background: #0e4bf1;
+  }
+</style>
+
+</html>
